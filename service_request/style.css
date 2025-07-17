@@ -1,0 +1,89 @@
+/* Reset + base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f0f4ff, #ffe4f0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Frosted container */
+.form-container {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+/* Input groups */
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 0 1px #ccc;
+  transition: 0.2s ease;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 2px #94b4ff;
+}
+
+/* Submit Button */
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.9rem;
+  background: #94b4ff;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #769fff;
+  transform: scale(1.02);
+}
