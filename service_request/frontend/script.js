@@ -16,7 +16,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Simulate success
-    alert("Request submitted successfully ✅");
+    fetch("http://localhost:5000/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        service,
+        date,
+        notes,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message); // success
+        form.reset();
+      })
+      .catch((err) => {
+        alert("Something went wrong 😭");
+        console.error(err);
+      });
 
     // Log form data (for dev only)
     console.log({
